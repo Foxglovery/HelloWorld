@@ -55,14 +55,60 @@ namespace HelloWorld
             //int age = 35;
             //Console.WriteLine(age);
 
-            // REMAINDER 
-            int firstNum = 1675;
-            int secondNum = 12;
-            int remainder = firstNum % secondNum;
-            Console.WriteLine(remainder);
+            // REMAINDER
+            // 10 is even because 0 r
+            //int firstNum = 10;
+            //int secondNum = 2;
+            //int remainder = firstNum % secondNum;
+            //Console.WriteLine(remainder);
 
+            // INPUT
+            // .Write keeps the input on the same line
+            // while .WriteLine puts a terminus at the line end
 
+            //Console.WriteLine("Hello my name is Gabe");
+
+            /*
+                Console.Write("Enter your name: ");
+            string name = Console.ReadLine();
+            // Console.WriteLine(name);
             
+            Console.Write("Enter your age: ");
+            
+            int age = Convert.ToInt32(Console.ReadLine());
+
+            // Console.WriteLine(age);
+            Console.WriteLine();
+            Console.WriteLine("Your name is " + name + " and your age is " + age);
+            
+            if (age < 0 || age > 150)
+            {
+                Console.WriteLine("Invalid age");
+            }
+            else
+            {
+            if (age >= 18 || age <= 25)
+            {
+                Console.WriteLine("You are between 18 and 25");
+            }
+            else if (age >= 26)
+            {
+                Console.WriteLine("You are 26 or older");
+            }
+            }
+            */
+
+            Console.Write("Enter the first number: ");
+            int firstNum = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.Write("Enter the second number: ");
+            int secondNum = Convert.ToInt32(Console.ReadLine());
+            int answer = firstNum * secondNum;
+
+            Console.WriteLine();
+            Console.Write("The product is: " + answer);
+
 
             Console.ReadLine();
         }
