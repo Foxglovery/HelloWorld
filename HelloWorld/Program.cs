@@ -107,7 +107,17 @@ namespace HelloWorld
             int answer = firstNum * secondNum;
 
             Console.WriteLine();
-            Console.Write("The product is: " + answer);
+            Console.Write("The product of " + firstNum + " X " + secondNum + " is: ");
+            int answerInput = Convert.ToInt32(Console.ReadLine());
+
+            if (answerInput == answer)
+            {
+                Console.WriteLine("Well done, you can do math!");
+            }
+            else
+            {
+                Console.WriteLine("maybe study a bit more?");
+            }
 
 
             Console.ReadLine();
