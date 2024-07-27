@@ -98,6 +98,7 @@ namespace HelloWorld
             }
             */
 
+            /*
             Console.Write("Enter the first number: ");
             int firstNum = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
@@ -117,6 +118,47 @@ namespace HelloWorld
             else
             {
                 Console.WriteLine("maybe study a bit more?");
+            }*/
+
+            /* SWITCH STATEMENTS*/
+
+            Console.Write("Enter a day of the week: ");
+            int day = Convert.ToInt32(Console.ReadLine());
+            if (day == 1)
+            {
+                Console.WriteLine("Mon");
+            }
+
+            switch (day)
+            {
+                case 1:
+                    Console.WriteLine("Mon");
+                    break;
+                /* Adding an empty case is the same as saying OR with the one below it */
+                /* case 0: */
+                case 2:
+                    Console.WriteLine("Tues");
+                    break;
+                case 3:
+                    Console.WriteLine("Wed");
+                    break;
+                case 4:
+                    Console.WriteLine("Thur");
+                    break;
+                case 5:
+                    Console.WriteLine("Fri");
+                    break;
+                case 6:
+                    Console.WriteLine("Sat");
+                    break;
+                case 7:
+                    Console.WriteLine("Sun");
+                    break;
+
+                /* The default will run if none of the values match the above switch */
+                default:
+                    Console.WriteLine("Invalid, enter a number between 1 and 7");
+                    break ;
             }
 
 
