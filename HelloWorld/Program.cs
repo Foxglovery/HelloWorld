@@ -122,7 +122,7 @@ namespace HelloWorld
 
             /* SWITCH STATEMENTS*/
 
-            Console.Write("Enter a day of the week: ");
+            /* Console.Write("Enter a day of the week: ");
             int day = Convert.ToInt32(Console.ReadLine());
             if (day == 1)
             {
@@ -135,31 +135,60 @@ namespace HelloWorld
                     Console.WriteLine("Mon");
                     break;
                 /* Adding an empty case is the same as saying OR with the one below it */
-                /* case 0: */
-                case 2:
-                    Console.WriteLine("Tues");
-                    break;
-                case 3:
-                    Console.WriteLine("Wed");
-                    break;
-                case 4:
-                    Console.WriteLine("Thur");
-                    break;
-                case 5:
-                    Console.WriteLine("Fri");
-                    break;
-                case 6:
-                    Console.WriteLine("Sat");
-                    break;
-                case 7:
-                    Console.WriteLine("Sun");
-                    break;
+            /* case 0: */
+            //case 2:
+            //    Console.WriteLine("Tues");
+            //    break;
+            //case 3:
+            //    Console.WriteLine("Wed");
+            //    break;
+            //case 4:
+            //    Console.WriteLine("Thur");
+            //    break;
+            //case 5:
+            //    Console.WriteLine("Fri");
+            //    break;
+            //case 6:
+            //    Console.WriteLine("Sat");
+            //    break;
+            //case 7:
+            //    Console.WriteLine("Sun");
+            //    break;
 
-                /* The default will run if none of the values match the above switch */
-                default:
-                    Console.WriteLine("Invalid, enter a number between 1 and 7");
-                    break ;
+            /* The default will run if none of the values match the above switch */
+            /*default:
+                Console.WriteLine("Invalid, enter a number between 1 and 7");
+                break ;
+        } */
+
+            // FOR LOOPS
+
+
+            Console.Write("What do you want to say?: ");
+            string message = Console.ReadLine();
+            Console.Write("How many times do you want to say it?: ");
+            int loopCounter = Convert.ToInt32(Console.ReadLine());
+
+            if (loopCounter <= 0)
+            {
+                Console.WriteLine("You should rethink your choices.");
             }
+            else
+            {
+            for (int i = 0; i < loopCounter; i++) 
+            {
+                Console.WriteLine(message);
+            }
+            }
+
+            
+            
+            // writes on even numbers
+            /* for (int i = 0; i <= 10; i += 2)
+            {
+                Console.WriteLine(i);
+
+            } */
 
 
             Console.ReadLine();
