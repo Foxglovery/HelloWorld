@@ -98,7 +98,7 @@ namespace HelloWorld
             }
             */
 
-            /*
+            
             Console.Write("Enter the first number: ");
             int firstNum = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
@@ -106,19 +106,30 @@ namespace HelloWorld
             Console.Write("Enter the second number: ");
             int secondNum = Convert.ToInt32(Console.ReadLine());
             int answer = firstNum * secondNum;
+            int actualAnswer = 0;
 
             Console.WriteLine();
-            Console.Write("The product of " + firstNum + " X " + secondNum + " is: ");
-            int answerInput = Convert.ToInt32(Console.ReadLine());
+            Console.Write("What is the product of " + firstNum + " X " + secondNum + "?: ");
+            Console.WriteLine();
+            
 
-            if (answerInput == answer)
+            while (answer != actualAnswer)
             {
-                Console.WriteLine("Well done, you can do math!");
+                string answerInput = Console.ReadLine();
+                actualAnswer = Convert.ToInt32(answerInput);
+
+                if (answer != actualAnswer)
+            {
+                Console.WriteLine("No, not quite.");
             }
-            else
-            {
-                Console.WriteLine("maybe study a bit more?");
-            }*/
+            }
+
+            Console.WriteLine("Well done!");
+           
+
+            
+           
+            
 
             /* SWITCH STATEMENTS*/
 
@@ -163,7 +174,7 @@ namespace HelloWorld
 
             // FOR LOOPS
 
-
+            /*
             Console.Write("What do you want to say?: ");
             string message = Console.ReadLine();
             Console.Write("How many times do you want to say it?: ");
@@ -190,6 +201,9 @@ namespace HelloWorld
 
             } */
 
+            // WHILE LOOPS
+            
+            
 
             Console.ReadLine();
         }
