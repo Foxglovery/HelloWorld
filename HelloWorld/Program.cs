@@ -98,38 +98,60 @@ namespace HelloWorld
             }
             */
 
-            
-            Console.Write("Enter the first number: ");
-            int firstNum = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine();
 
-            Console.Write("Enter the second number: ");
-            int secondNum = Convert.ToInt32(Console.ReadLine());
-            int answer = firstNum * secondNum;
-            int actualAnswer = 0;
+            /* Console.Write("Enter the first number: ");
+             int firstNum = Convert.ToInt32(Console.ReadLine());
+             Console.WriteLine();
 
-            Console.WriteLine();
-            Console.Write("What is the product of " + firstNum + " X " + secondNum + "?: ");
-            Console.WriteLine();
-            
+             Console.Write("Enter the second number: ");
+             int secondNum = Convert.ToInt32(Console.ReadLine());
+             Console.WriteLine();
+             int answer = firstNum * secondNum;
+             int actualAnswer = 0;
 
-            while (answer != actualAnswer)
+             Console.WriteLine();
+             Console.Write("What is the product of " + firstNum + " X " + secondNum + "?: ");
+             Console.WriteLine();
+
+
+              while (answer != actualAnswer)
+             {
+                 Console.Write("Enter your answer: ");
+                 string answerInput = Console.ReadLine();
+                 actualAnswer = Convert.ToInt32(answerInput);
+
+                 if (answer != actualAnswer)
+             {
+                 Console.WriteLine("No, not quite.");
+                     Console.WriteLine();
+                 }
+             } */
+
+            // DO WHILE will check condition at the end of the loop
+            // otherwise it will continue
+            // in this example, it allows for the possibility of the answer actually being 0
+
+            /* do
             {
+                Console.Write("Enter your answer: ");
                 string answerInput = Console.ReadLine();
                 actualAnswer = Convert.ToInt32(answerInput);
 
                 if (answer != actualAnswer)
-            {
-                Console.WriteLine("No, not quite.");
-            }
-            }
+                {
+                    Console.WriteLine("No, not quite.");
+                    Console.WriteLine();
+                }
+            } while (answer != actualAnswer);
 
             Console.WriteLine("Well done!");
-           
 
-            
-           
-            
+            */
+
+
+
+
+
 
             /* SWITCH STATEMENTS*/
 
@@ -202,8 +224,28 @@ namespace HelloWorld
             } */
 
             // WHILE LOOPS
+
+            // CONDITIONALS
+
+           /* int age = -10;
+
+            if (age >= 0)
+            {
+                Console.WriteLine("Valid");
+            }
+            else
+            {
+                Console.WriteLine("Invalid");
+            }
+
             
+            Console.WriteLine(age >= 0 ? "Valid" : "Invalid");
+           */
+
+            // NUMERICAL FORMATTING
+
             
+
 
             Console.ReadLine();
         }
