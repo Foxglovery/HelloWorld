@@ -274,33 +274,42 @@ namespace HelloWorld
 
             // TRYPARSE
 
-            
-            bool success = true;
 
-            while (success)
-            {
-                Console.Write("Enter a number: ");
-                string numInput = Console.ReadLine();
-                //int num = 0; dont need this anymore because we added a declaration to the OUT parameter
+            /* bool success = true;
 
-                if (int.TryParse(numInput, out int num))
-                {
-                    success = false;
-                    Console.WriteLine(num);
-                }
-                else
-                {
-                    Console.WriteLine("failed to convert");
-                }
+             while (success)
+             {
+                 Console.Write("Enter a number: ");
+                 string numInput = Console.ReadLine();
+                 //int num = 0; dont need this anymore because we added a declaration to the OUT parameter
 
-            }
+                 if (int.TryParse(numInput, out int num))
+                 {
+                     success = false;
+                     Console.WriteLine(num);
+                 }
+                 else
+                 {
+                     Console.WriteLine("failed to convert");
+                 }
+
+             }
+            */
 
             // tries to convert string to int32 and then if successful, stores value in the 2nd argument
             // if it fails because of invalid input, it will not throw error but instead returns bool
             // the bool lets us check whether 0 shows up due to failure or actual user input
-            
-            
 
+            // TIMES TABLE EXERCISE
+
+            Console.Write("Enter a number to multiply out, you dirty dog: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 1; i <= 12; i++)
+            {
+                // This CONDITIONAL FORMATTING is cool, its allowing you to plug in the values listed after the " "
+                Console.WriteLine("{0} x {1} = {2}", i, number, number * i);
+            }
 
 
             Console.ReadLine();
