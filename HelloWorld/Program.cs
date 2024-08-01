@@ -254,21 +254,54 @@ namespace HelloWorld
             // the "C" fetches the symbol for local currency
             // the numbers appended represent decimal places displayed
 
-            double value = 1000D / 12.34D;
-            Console.WriteLine(value);
-            Console.WriteLine(string.Format("{0:0.00}", value));
-            Console.WriteLine(string.Format("{0:0.#}", value));
+            /* double value = 1000D / 12.34D;
+             Console.WriteLine(value);
+             Console.WriteLine(string.Format("{0:0.00}", value));
+             Console.WriteLine(string.Format("{0:0.#}", value));
 
-            double money = 10D / 3D;
-            Console.WriteLine(money);
-            Console.WriteLine(string.Format("${0:0.00}", money));
-            Console.WriteLine(money.ToString("C"));
-            Console.WriteLine(money.ToString("C0"));
-            Console.WriteLine(money.ToString("C1"));
-            Console.WriteLine(money.ToString("C2"));
+             double money = 10D / 3D;
+             Console.WriteLine(money);
+             Console.WriteLine(string.Format("${0:0.00}", money));
+             Console.WriteLine(money.ToString("C"));
+             Console.WriteLine(money.ToString("C0"));
+             Console.WriteLine(money.ToString("C1"));
+             Console.WriteLine(money.ToString("C2"));
 
-            Console.WriteLine(money.ToString("C",CultureInfo.CurrentCulture ));
-            Console.WriteLine(money.ToString("C",CultureInfo.CreateSpecificCulture("en-GB") ));
+             // can use various cultures to format numbers
+             Console.WriteLine(money.ToString("C",CultureInfo.CurrentCulture ));
+             Console.WriteLine(money.ToString("C",CultureInfo.CreateSpecificCulture("en-GB") ));
+            */
+
+            // TRYPARSE
+
+            
+            bool success = true;
+
+            while (success)
+            {
+                Console.Write("Enter a number: ");
+                string numInput = Console.ReadLine();
+                //int num = 0; dont need this anymore because we added a declaration to the OUT parameter
+
+                if (int.TryParse(numInput, out int num))
+                {
+                    success = false;
+                    Console.WriteLine(num);
+                }
+                else
+                {
+                    Console.WriteLine("failed to convert");
+                }
+
+            }
+
+            // tries to convert string to int32 and then if successful, stores value in the 2nd argument
+            // if it fails because of invalid input, it will not throw error but instead returns bool
+            // the bool lets us check whether 0 shows up due to failure or actual user input
+            
+            
+
+
 
             Console.ReadLine();
         }
