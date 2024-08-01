@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace HelloWorld
 {
@@ -227,25 +228,47 @@ namespace HelloWorld
 
             // CONDITIONALS
 
-           /* int age = -10;
+            /* int age = -10;
 
-            if (age >= 0)
-            {
-                Console.WriteLine("Valid");
-            }
-            else
-            {
-                Console.WriteLine("Invalid");
-            }
+             if (age >= 0)
+             {
+                 Console.WriteLine("Valid");
+             }
+             else
+             {
+                 Console.WriteLine("Invalid");
+             }
 
-            
-            Console.WriteLine(age >= 0 ? "Valid" : "Invalid");
-           */
+
+             Console.WriteLine(age >= 0 ? "Valid" : "Invalid");
+            */
 
             // NUMERICAL FORMATTING
 
-            
+            // the first argument in format is the index of the first number followed with the number of decimals
+            // this also rounds up
+            // # trims off any trailing zeros
 
+            // using System.Globalization lets you use other currency symbols
+
+            // the "C" fetches the symbol for local currency
+            // the numbers appended represent decimal places displayed
+
+            double value = 1000D / 12.34D;
+            Console.WriteLine(value);
+            Console.WriteLine(string.Format("{0:0.00}", value));
+            Console.WriteLine(string.Format("{0:0.#}", value));
+
+            double money = 10D / 3D;
+            Console.WriteLine(money);
+            Console.WriteLine(string.Format("${0:0.00}", money));
+            Console.WriteLine(money.ToString("C"));
+            Console.WriteLine(money.ToString("C0"));
+            Console.WriteLine(money.ToString("C1"));
+            Console.WriteLine(money.ToString("C2"));
+
+            Console.WriteLine(money.ToString("C",CultureInfo.CurrentCulture ));
+            Console.WriteLine(money.ToString("C",CultureInfo.CreateSpecificCulture("en-GB") ));
 
             Console.ReadLine();
         }
