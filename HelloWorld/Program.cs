@@ -302,13 +302,67 @@ namespace HelloWorld
 
             // TIMES TABLE EXERCISE
 
-            Console.Write("Enter a number to multiply out, you dirty dog: ");
+            //Console.Write("Enter a number to multiply out, you dirty dog: ");
+            //int number = Convert.ToInt32(Console.ReadLine());
+
+            //for (int i = 1; i <= 12; i++)
+            //{
+            //    // This CONDITIONAL FORMATTING is cool, its allowing you to plug in the values listed after the " "
+            //    Console.WriteLine("{0} x {1} = {2}", i, number, number * i);
+            //}
+
+            // FIZZ BUZZ EXERCISE
+
+            Console.Write("Enter a number: ");
             int number = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = 1; i <= 12; i++)
+            //THIS IS THE ORIGINAL
+            //for (int i = 1; i <= number; i++)
+            //{
+            //    if (i % 3 == 0 && i % 5 == 0)
+            //    {
+            //        Console.WriteLine("FizzBuzz!");
+            //    }
+            //    else if (i % 3 == 0)
+            //    {
+            //        Console.WriteLine("Fizz");
+            //    }
+            //    else if(i % 5 == 0)
+            //    {
+            //        Console.WriteLine("Buzz");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //}
+
+            //A MORE EFFICIENT WAY is to store the modulus rules as booleans
+            
+            bool threeDiv = false;
+            bool fiveDiv = false;
+
+            for (int i = 1; i <= number; i++)
             {
-                // This CONDITIONAL FORMATTING is cool, its allowing you to plug in the values listed after the " "
-                Console.WriteLine("{0} x {1} = {2}", i, number, number * i);
+                threeDiv = i % 3 == 0;
+                fiveDiv = i % 5 == 0;
+
+                if (threeDiv && fiveDiv)
+                {
+                    Console.WriteLine("FizzBuzz!");
+                }
+                else if (threeDiv)
+                {
+                    Console.WriteLine("Fizz");
+                }
+                else if (fiveDiv)
+                {
+                    Console.WriteLine("Buzz");
+                }
+                else
+                {
+                    Console.WriteLine(i);
+                }
             }
 
 
