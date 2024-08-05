@@ -313,8 +313,8 @@ namespace HelloWorld
 
             // FIZZ BUZZ EXERCISE
 
-            Console.Write("Enter a number: ");
-            int number = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Enter a number: ");
+            //int number = Convert.ToInt32(Console.ReadLine());
 
             //THIS IS THE ORIGINAL
             //for (int i = 1; i <= number; i++)
@@ -338,32 +338,51 @@ namespace HelloWorld
             //}
 
             //A MORE EFFICIENT WAY is to store the modulus rules as booleans
-            
-            bool threeDiv = false;
-            bool fiveDiv = false;
 
-            for (int i = 1; i <= number; i++)
-            {
-                threeDiv = i % 3 == 0;
-                fiveDiv = i % 5 == 0;
+            //bool threeDiv = false;
+            //bool fiveDiv = false;
 
-                if (threeDiv && fiveDiv)
-                {
-                    Console.WriteLine("FizzBuzz!");
-                }
-                else if (threeDiv)
-                {
-                    Console.WriteLine("Fizz");
-                }
-                else if (fiveDiv)
-                {
-                    Console.WriteLine("Buzz");
-                }
-                else
-                {
-                    Console.WriteLine(i);
-                }
-            }
+            //for (int i = 1; i <= number; i++)
+            //{
+            //    threeDiv = i % 3 == 0;
+            //    fiveDiv = i % 5 == 0;
+
+            //    if (threeDiv && fiveDiv)
+            //    {
+            //        Console.WriteLine("FizzBuzz!");
+            //    }
+            //    else if (threeDiv)
+            //    {
+            //        Console.WriteLine("Fizz");
+            //    }
+            //    else if (fiveDiv)
+            //    {
+            //        Console.WriteLine("Buzz");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //}
+
+            // VERBATIM STRING LITERALS
+            // when using backslash in string you must use 2 because 1 backslash escapes the next character
+            //string speech = "He said \"something\"";
+            //string path = "C:\\Users\\CoffeeNCode\\OtherPaths.img\nNewLineTest";
+            //Console.WriteLine(path);
+            //Console.WriteLine(speech);
+
+            //// the @ is verbatim identifier: means it is literally what you will see
+            //path = @"C:\Users\CoffeeNCode\OtherPaths.img" + "\nNewLineTest";
+            //Console.WriteLine(path);
+
+            //string name = "Hello \"someone\"";
+            //Console.WriteLine(name);
+
+            //name = "Hello 'someone'";
+
+            // STRING FORMATTING
+
 
 
             Console.ReadLine();
