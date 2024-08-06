@@ -513,11 +513,36 @@ namespace HelloWorld
             //    {
             //        Console.WriteLine("2");
             //    }
-                
+
             //} 
-                
-            
-            
+
+            // PRINT STRING IN REVERSE EXERCISE
+
+            //Console.Write("What message would you like to print?: ");
+            //string message = Console.ReadLine();
+
+            //Console.WriteLine();
+
+            //for (int i = 0; i < message.Length; i++)
+            //{
+            //    Console.Write(message[i]);
+            //    Thread.Sleep(150);
+            //}
+
+            //Console.WriteLine();
+            //for (int i = message.Length -1; i >= 0; i--)
+            //{  
+            //    Console.Write(message[i]);
+            //    Thread.Sleep(150);
+            //}
+
+            // also there is a snippet for reversed for loop "forr"
+
+            // EXCERCISE PASSWORD CHECKER
+
+
+
+
             Console.ReadLine();
         }
     }
