@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
+using System.Threading;
 
 namespace HelloWorld
 {
@@ -383,6 +384,113 @@ namespace HelloWorld
 
             // STRING FORMATTING
 
+            //string name = "Aba";
+            //int age = 32;
+            //Console.WriteLine("Name: " + name);
+            //Console.WriteLine("Age: " + age);
+
+            //Console.WriteLine();
+
+            //Console.WriteLine("Name: " + name + "\nAge: " + age);
+            //// with composite formatting
+            //Console.WriteLine("Your name is {0}, and your age is {1}", name, age);
+            //Console.WriteLine("Name: {0}\nAge: {1}", name, age);
+
+            // STRING INTERPOLATION
+
+            //string name = "Aba";
+            //int age = 32;
+            //Console.WriteLine($"Your name is {name} and your age is {age}");
+
+            //// STRING CONCATENATION
+            //string test = string.Concat("Your name is ", name, " and your age is ", age);
+            //Console.WriteLine(test);
+
+            //string[] names = new string[] { "Aba", "Test", "Test" };
+            //Console.WriteLine(string.Concat(names));
+
+            // EMPTY STRING
+
+            // string name = string.Empty;
+            //Console.Write("Enter your name: ");
+            //string name = Console.ReadLine();
+
+            //if (name != "")
+            //{
+            //    Console.WriteLine($"Your name is {name}");
+
+            //}
+            //else
+            //{
+            //    Console.WriteLine("name is Empty");
+            //}
+
+            // STRING EQUALITY
+
+            //string message = "Hello";
+            //string compare = "Hello";
+
+            //if (message.Equals(compare))
+            //{
+            //    Console.WriteLine("Same");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Different");
+            //}
+
+            //Console.Write("enter your name: ");
+            //string name = Console.ReadLine();
+
+            //// best practice to use the .Equals method on string
+            //if (!name.Equals(""))
+            //{
+            //    Console.WriteLine("Your name is " + name);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Invalid name input");
+            //}
+
+            //// comparing an object and string, will not work with ==
+            //// Equals method checks the values not where they are in memory
+            //char[] chars = new char[] { 'H', 'e', 'l', 'l', 'o' };
+            //object newCompare = new string(chars);
+
+            //if (message.Equals(newCompare))
+            //    Console.WriteLine("Same");
+            //else
+            //    Console.WriteLine("Different");
+
+            // STRING INTERATION (LOOPING)
+
+            //string message = "C# is awesome";
+            ////Console.WriteLine(message[0]);
+            ////Console.WriteLine(message[1]);
+            ////Console.WriteLine(message[2]);
+            ////Console.WriteLine(message[3]);
+
+            //for (int i = 0; i < message.Length; i++)
+            //{
+            //    Console.Write(message[i]);
+            //    // threading puts a delay or sleep on printing the characters like a typewriter
+            //    Thread.Sleep(100);
+            //}
+            //Console.WriteLine();
+
+            //Console.WriteLine(message.Contains("C"));
+
+            //bool contains = false;
+
+            //for (int i = 0;i < message.Length; i++)
+            //{
+            //    if (message[i].Equals('C'))
+            //    {
+            //        contains = true;
+            //    }
+            //}
+
+            //Console.WriteLine(contains);
 
 
             Console.ReadLine();
