@@ -492,7 +492,32 @@ namespace HelloWorld
 
             //Console.WriteLine(contains);
 
+            // STRING IsNullOrEmpty FUNCTION
 
+            //Console.Write("Enter your name: ");
+            //string name = Console.ReadLine();
+
+            //Console.WriteLine($"Your name is {name}");
+            ////if (name != "")
+            ////    Console.WriteLine("0");
+            ////// OR
+            ////if (!name.Equals(""))
+            ////    Console.WriteLine("1");
+
+            //// OR
+            //// using IsNullOrEmpty checks both conditions and is better
+            //// because using a function on a null value will throw exception
+            //if (!string.IsNullOrEmpty(name))
+            //{
+            //    if (!name.Equals(""))
+            //    {
+            //        Console.WriteLine("2");
+            //    }
+                
+            //} 
+                
+            
+            
             Console.ReadLine();
         }
     }
