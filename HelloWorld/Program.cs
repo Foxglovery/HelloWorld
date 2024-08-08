@@ -540,6 +540,39 @@ namespace HelloWorld
 
             // EXCERCISE PASSWORD CHECKER
 
+            // splitting the if statements up allows for different error messages
+
+            Console.Write("Please enter password: ");
+            string password = Console.ReadLine();
+            
+            Console.Write("Please re-enter password: ");
+            string passwordC = Console.ReadLine();
+            
+            if (!password.Equals(string.Empty))
+            {
+                if (!passwordC.Equals(string.Empty))
+                {
+                    if (password.Equals(passwordC))
+                    {
+                        Console.WriteLine("Passwords match");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Password do not match");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Please enter password confirmation");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Please enter password");
+            }
+            
+
+            
 
 
 
