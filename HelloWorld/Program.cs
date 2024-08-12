@@ -572,22 +572,80 @@ namespace HelloWorld
             //}
 
             // ARRAYS
-            
+
             // adding the 3 after the instantiation tells it that there are 3 positions
-            int[] numbers = new int[3];
+            // int[] numbers = new int[3];
 
-            Console.Write("Enter a number: ");
-            numbers[0] = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Enter a number: ");
+            //numbers[0] = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Enter a number: ");
-            numbers[1] = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Enter a number: ");
+            //numbers[1] = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Enter a number: ");
-            numbers[2] = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Enter a number: ");
+            //numbers[2] = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine($"{numbers[0]} {numbers[1]} {numbers[2]}");
+            //for (int i  = 0; i < numbers.Length; i++)
+            //{
+            //    Console.Write("Enter a number: ");
+            //    numbers[i] = Convert.ToInt32(Console.ReadLine());
+            //}
 
+            // Console.WriteLine($"{numbers[0]} {numbers[1]} {numbers[2]}");
 
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    Console.Write($"{numbers[i]} ");
+            //}
+
+            // Console.WriteLine();
+            // this does the same thing and no brackets are needed
+            // but cannot choose how many iterations to loop through; it does each
+            //foreach (int num in numbers)
+            //{
+            //    Console.Write($"{num} ");
+            //}
+
+            // ANGLE SUM EXERCISE
+
+            // const int angleCount = 3; //// having a number here is called magic number and is confusing
+            // int[] angles = new int[angleCount];
+
+            //for (int i = 0; i < angles.Length; i++)
+            // {
+            //     Console.Write($"Enter angle {i + 1}: ");
+            //     angles[i] = Convert.ToInt32(Console.ReadLine());
+            // }
+
+            // int angleSum = 0;
+
+            //foreach (int angle in angles)
+            // {
+            //     angleSum += angle;
+            // }
+
+            //if (angleSum == 180)
+            // {
+            //     Console.WriteLine("Valid");
+            // }
+            //else
+            // {
+            //     Console.WriteLine("Invalid");
+            // }
+
+            // OR
+            // without using an array
+
+            //const int angleCount = 3;
+            //int angleSum = 0;
+
+            //for (int i = 0; i < angleCount; i++)
+            //{
+            //    Console.Write($"Enter angle {i + 1}: ");
+            //   angleSum += Convert.ToInt32(Console.ReadLine());
+            //}
+
+            //Console.WriteLine(angleSum == 180 ? "Valid" : "Invalid");
 
 
             Console.ReadLine();
