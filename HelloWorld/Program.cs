@@ -542,37 +542,51 @@ namespace HelloWorld
 
             // splitting the if statements up allows for different error messages
 
-            Console.Write("Please enter password: ");
-            string password = Console.ReadLine();
-            
-            Console.Write("Please re-enter password: ");
-            string passwordC = Console.ReadLine();
-            
-            if (!password.Equals(string.Empty))
-            {
-                if (!passwordC.Equals(string.Empty))
-                {
-                    if (password.Equals(passwordC))
-                    {
-                        Console.WriteLine("Passwords match");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Password do not match");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Please enter password confirmation");
-                }
-            }
-            else
-            {
-                Console.WriteLine("Please enter password");
-            }
-            
+            //Console.Write("Please enter password: ");
+            //string password = Console.ReadLine();
 
+            //Console.Write("Please re-enter password: ");
+            //string passwordC = Console.ReadLine();
+
+            //if (!password.Equals(string.Empty))
+            //{
+            //    if (!passwordC.Equals(string.Empty))
+            //    {
+            //        if (password.Equals(passwordC))
+            //        {
+            //            Console.WriteLine("Passwords match");
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Password do not match");
+            //        }
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Please enter password confirmation");
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Please enter password");
+            //}
+
+            // ARRAYS
             
+            // adding the 3 after the instantiation tells it that there are 3 positions
+            int[] numbers = new int[3];
+
+            Console.Write("Enter a number: ");
+            numbers[0] = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter a number: ");
+            numbers[1] = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter a number: ");
+            numbers[2] = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine($"{numbers[0]} {numbers[1]} {numbers[2]}");
+
 
 
 
