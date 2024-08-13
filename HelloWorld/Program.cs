@@ -647,7 +647,35 @@ namespace HelloWorld
 
             //Console.WriteLine(angleSum == 180 ? "Valid" : "Invalid");
 
+            // ARRAY SORTING
 
+            //int[] numbers = new int[]
+            //{
+            //    2, 1, 7, 9, 5, 6, 7, 8, 9
+            //};
+
+            //string test = "";
+            //test.Replace(" ", "");
+            //Array.Sort(numbers);
+
+            //foreach (int num in numbers)
+            //{
+            //    Console.Write($"{num} ");
+            //}
+
+            // ARRAY REVERSAL
+
+            int[] numbers = new int[]
+            {
+                0, 1, 2, 3, 4, 5, 6
+            };
+
+            Array.Reverse(numbers);
+            
+            foreach (int num in numbers)
+            {
+                Console.Write($"{num} ");
+            }
             Console.ReadLine();
         }
     }
