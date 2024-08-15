@@ -665,17 +665,114 @@ namespace HelloWorld
 
             // ARRAY REVERSAL
 
-            int[] numbers = new int[]
-            {
-                0, 1, 2, 3, 4, 5, 6
-            };
+            //int[] numbers = new int[]
+            //{
+            //    0, 1, 2, 3, 4, 5, 6
+            //};
 
-            Array.Reverse(numbers);
+            //Array.Reverse(numbers);
+
+            //foreach (int num in numbers)
+            //{
+            //    Console.Write($"{num} ");
+            //}
+            //Console.WriteLine();
+            //// or do it manually
+
+            //int[] sortedNumbers = new int[numbers.Length];
+
+            //int x = 0;
+            //for (int i = numbers.Length - 1; i >= 0; i--)
+            //{
+            //    sortedNumbers[x] = numbers[i];
+            //    x++;
+            //   // Console.Write($"{i} ");
+            //}
+
+            //foreach (int num in sortedNumbers)
+            //{
+            //    Console.Write($"{num} ");
+            //}
+
+            // ARRAY CLEARING
+
+            //int[] numbers = new int[]
+            //{
+            //    0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+            //};
+
+            ////Array.Clear(numbers, 0, numbers.Length);
+            //Array.Clear(numbers, 5, 5);
+
+
+            ////or manually
+
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    numbers[i] = default;
+            //}
+
+            //foreach (int number in numbers)
+            //{
+            //    Console.Write($"{number} ");
+            //}
+
+            // ARRAY IndexOf
+
+            //int[] numbers = new int[]
+            //{
+            //    90, 199, 22, 50, 30
+            //};
+
+            //Console.Write("Enter number to search: ");
+            //int search = Convert.ToInt32(Console.ReadLine());
+
+            ////int position = Array.IndexOf(numbers, search);
+            //// can also give IndexOf a start index, as well as a range limit
+            //int position = Array.IndexOf(numbers, search, 0, 2);
+
+            //if (position > -1)
+            //{
+            //    Console.WriteLine($"Number {search} has been found at position {position + 1}.");
+
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"{search} not found");
+            //}
+
+
+            // LISTS
+
+            //int[] numbers = new int[3]
+            //{
+            //    1, 2 , 3
+            //};
+
+            //// list constructor can specify the capacity or it can be left blank to grow as needed
+            //List<int> listNumbers = new List<int>();
+
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    Console.Write("Enter a number: ");
+            //    listNumbers.Add(Convert.ToInt32(Console.ReadLine()));
+            //}
             
-            foreach (int num in numbers)
-            {
-                Console.Write($"{num} ");
-            }
+            //for (int i = 0;i < listNumbers.Count; i++)
+            //{
+            //    Console.Write($"{listNumbers[i]} ");
+            //}
+            
+            // DICTIONARIES
+
+
+
+
+
+
+
+
+
             Console.ReadLine();
         }
     }
