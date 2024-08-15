@@ -757,14 +757,71 @@ namespace HelloWorld
             //    Console.Write("Enter a number: ");
             //    listNumbers.Add(Convert.ToInt32(Console.ReadLine()));
             //}
-            
+
             //for (int i = 0;i < listNumbers.Count; i++)
             //{
             //    Console.Write($"{listNumbers[i]} ");
             //}
-            
-            // DICTIONARIES
 
+            // DICTIONARIES which store key value pairs
+
+            // keys must be unique and not null
+
+            //Dictionary<int, string> names = new Dictionary<int, string>
+            //{
+            //    // KeyValue Pair
+            //    { 1, "Aba" },
+            //    { 2, "Test" },
+            //    { 3, "Test" }
+            //};
+
+            //// must use ElementAt because i is an index and not the key being referenced
+            //for (int i = 0; i < names.Count; i++)
+            //{
+            //    KeyValuePair<int, string> pair = names.ElementAt(i);
+
+            //    Console.WriteLine($"{pair.Key} - {pair.Value}");
+
+
+            //    //Console.WriteLine(names.ElementAt(i).Value);
+            //}
+
+            //// with a foreach loop
+
+            //foreach (KeyValuePair<int, string> item in names)
+            //{
+            //    Console.WriteLine($"{item.Key} - {item.Value}");
+            //}
+
+            //Dictionary<string, string> teachers = new Dictionary<string, string>()
+            //{
+            //    {"Math", "Aba" },
+            //    {"Science", "Test" }
+            //};
+            //// returns the value from the specified key but can break if nonexistent
+            //// instead you should check to ensure it exists
+            //// Console.WriteLine(teachers["Math"]);
+
+            //if (teachers.TryGetValue("Math", out string teacher))
+            //{
+            //    Console.WriteLine(teacher);
+
+            //    teachers["Math"] = "Joe";
+            //}
+            //else
+            //{
+            //    Console.WriteLine("teacher not found");
+            //}
+
+            //if (teachers.ContainsKey("Math"))
+            //{
+            //    teachers.Remove("Math");
+            //}
+
+            //foreach (var item in teachers)
+            //{
+            //    Console.WriteLine($"{item.Key} - {item.Value}");
+            //}
 
 
 
