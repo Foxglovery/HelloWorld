@@ -852,6 +852,24 @@ namespace HelloWorld
             //    Console.Write($"{i} ");
             //}
 
+            // ARRAY OF MULTIPLES EXERCISE
+
+            //int num = 7;
+            //int length = 12;
+            //int counter = 0;
+            //int[] multiples = new int[length];
+
+            //// or you can declare int counter = 0 and add counter++ with a comma to the for loop
+            //for (int i = 1; i <= multiples.Length; i++, counter++)
+            //{
+            //    multiples[counter] = num * i;
+            //}
+            //Console.WriteLine($"Multiples of {num}: ");
+
+            //foreach (int item in  multiples)
+            //{
+            //    Console.Write($"{item} ");
+            //}
 
 
 
