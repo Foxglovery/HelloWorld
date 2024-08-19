@@ -823,7 +823,34 @@ namespace HelloWorld
             //    Console.WriteLine($"{item.Key} - {item.Value}");
             //}
 
+            // EVEN_ODD LIST SPLIT EXERCISE
 
+            //List<int> even = new List<int>();
+            //List<int> odd = new List<int>();
+
+            //for (int i = 1; i <= 20; i++)
+            //{
+            //    if (i % 2 == 0)
+            //    {
+            //        even.Add(i);
+            //    }
+            //    else
+            //    {
+            //        odd.Add(i);
+            //    }
+            //}
+            //Console.WriteLine("Even: ");
+            //foreach (int i in even)
+            //{
+            //    Console.Write($"{i} ");
+            //}
+            //Console.WriteLine();
+
+            //Console.WriteLine("Odd: ");
+            //foreach (int i in odd)
+            //{
+            //    Console.Write($"{i} ");
+            //}
 
 
 
