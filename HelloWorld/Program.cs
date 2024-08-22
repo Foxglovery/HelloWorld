@@ -9,6 +9,13 @@ using System.Threading;
 
 namespace HelloWorld
 {
+    class Test
+    {
+        public static void something()
+        {
+            Console.WriteLine("Test");
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -871,11 +878,88 @@ namespace HelloWorld
             //    Console.Write($"{item} ");
             //}
 
+            // FUNCTIONS
 
+            // .NET must have a static function called Main
 
+            //Test.something();
+            //// without static keyword it would look like this:
+            //// Test test = new Test();
+            //// test.something();
+
+            //WelcomeMessage();
+            //CreateAndPrintArray();
+            //bool success = int.TryParse("123", out int result);
+            //Console.WriteLine(success);
+
+            // static means that a "new" instance does not need to be created
+            // public means it can be used anywhere
+            //static void WelcomeMessage()
+            //{
+            //    Console.WriteLine("Welcome to my program");
+            //}
+
+            //static void CreateAndPrintArray()
+            //{
+            //    int[] numbers = new int[3] { 0, 1, 2 };
+
+            //    foreach (var item in numbers)
+            //    {
+            //        Console.WriteLine($"{item} ");    
+            //    }
+            //}
+
+            // RETURN TYPE FUNCTIONS
+
+            // specifying Console.Title = "blah blah blah" will display blah... ontop the console
+
+            Console.Title = $"{ReturnName()} - {ReturnAge()}";
+            PrintIntroduction();
+
+            int[] numbers = new int[3];
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] = ReadNumberFromConsole();
+            }
+            
 
 
             Console.ReadLine();
         }
+
+        static int[] CreateRandomArray()
+        {
+            int[] numbers = new int[3]
+            {
+                0, 1, 2
+            };
+
+            return numbers;
+        }
+
+        static int ReadNumberFromConsole()
+        {
+            Console.Write("Enter a number: ");
+            return Convert.ToInt32(Console.ReadLine());
+        }
+
+        // dont use global vars, instead use return type funcs
+        static string ReturnName()
+        {
+            return "Gabe";
+        }
+
+        static int ReturnAge()
+        {
+            return 36;
+        }
+
+        static void PrintIntroduction()
+        {
+            Console.WriteLine($"My name is {ReturnName()} and my age is {ReturnAge()}");
+        }
+        
+
     }
 }
