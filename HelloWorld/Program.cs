@@ -913,52 +913,77 @@ namespace HelloWorld
 
             // specifying Console.Title = "blah blah blah" will display blah... ontop the console
 
-            Console.Title = $"{ReturnName()} - {ReturnAge()}";
-            PrintIntroduction();
+            //Console.Title = $"{ReturnName()} - {ReturnAge()}";
+            //PrintIntroduction();
 
-            int[] numbers = new int[3];
+            //int[] numbers = new int[3];
 
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                numbers[i] = ReadNumberFromConsole();
-            }
-            
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    numbers[i] = ReadNumberFromConsole();
+            //}
 
+            //foreach (var item in numbers)
+            //{
+            //    Console.Write($"{item} ");
+            //}
+
+            //int[] newNumbers = CreateRandomArray();
+
+            // FUNCTION PARAMETERS
+
+            // Console.WriteLine(Add(5, 5));
+
+
+            int num1 = ReadInt("angle");
+            int num2 = ReadInt("angle");
+
+            Console.WriteLine(Add(num1, num2));
 
             Console.ReadLine();
         }
 
-        static int[] CreateRandomArray()
+        static int Add(int a, int b)
         {
-            int[] numbers = new int[3]
-            {
-                0, 1, 2
-            };
-
-            return numbers;
+            return a + b;        
         }
 
-        static int ReadNumberFromConsole()
+        static int ReadInt(string message)
         {
-            Console.Write("Enter a number: ");
+            Console.Write($"Enter a {message}: ");
             return Convert.ToInt32(Console.ReadLine());
         }
+        //static int[] CreateRandomArray()
+        //{
+        //    int[] numbers = new int[3]
+        //    {
+        //        0, 1, 2
+        //    };
+
+        //    return numbers;
+        //}
+
+        //static int ReadNumberFromConsole()
+        //{
+        //    Console.Write("Enter a number: ");
+        //    return Convert.ToInt32(Console.ReadLine());
+        //}
 
         // dont use global vars, instead use return type funcs
-        static string ReturnName()
-        {
-            return "Gabe";
-        }
+        //static string ReturnName()
+        //{
+        //    return "Gabe";
+        //}
 
-        static int ReturnAge()
-        {
-            return 36;
-        }
+        //static int ReturnAge()
+        //{
+        //    return 36;
+        //}
 
-        static void PrintIntroduction()
-        {
-            Console.WriteLine($"My name is {ReturnName()} and my age is {ReturnAge()}");
-        }
+        //static void PrintIntroduction()
+        //{
+        //    Console.WriteLine($"My name is {ReturnName()} and my age is {ReturnAge()}");
+        //}
         
 
     }
