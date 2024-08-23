@@ -935,11 +935,16 @@ namespace HelloWorld
             // Console.WriteLine(Add(5, 5));
 
 
-            int num1 = ReadInt("angle");
-            int num2 = ReadInt("angle");
+            int num1 = ReadInt("Enter first number");
+            int num2 = ReadInt("Enter second number");
+            int result = Add(num1, num2);
 
-            Console.WriteLine(Add(num1, num2));
+            Console.WriteLine(result);
 
+            string name = ReadString("Enter your name");
+            int age = ReadInt("Enter your age");
+            string details = UserDetails(name, age);
+            Console.WriteLine(details);
             Console.ReadLine();
         }
 
@@ -950,9 +955,21 @@ namespace HelloWorld
 
         static int ReadInt(string message)
         {
-            Console.Write($"Enter a {message}: ");
+            Console.Write($"{message}: ");
             return Convert.ToInt32(Console.ReadLine());
         }
+
+        static string ReadString(string message)
+        {
+            Console.Write($"{message}: ");
+            return Convert.ToString(Console.ReadLine());
+        }
+
+        static string UserDetails(string name, int age)
+        {
+            return $"Hello, my name is {name} and my age is {age}";
+        }
+
         //static int[] CreateRandomArray()
         //{
         //    int[] numbers = new int[3]
