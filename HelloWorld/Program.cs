@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
 using System.Threading;
+using System.Runtime.InteropServices;
 
 namespace HelloWorld
 {
@@ -935,40 +936,66 @@ namespace HelloWorld
             // Console.WriteLine(Add(5, 5));
 
 
-            int num1 = ReadInt("Enter first number");
-            int num2 = ReadInt("Enter second number");
-            int result = Add(num1, num2);
+            //int num1 = ReadInt("Enter first number");
+            //int num2 = ReadInt("Enter second number");
+            //int result = Add(num1, num2);
 
-            Console.WriteLine(result);
+            //Console.WriteLine(result);
 
-            string name = ReadString("Enter your name");
-            int age = ReadInt("Enter your age");
-            string details = UserDetails(name, age);
-            Console.WriteLine(details);
+            //string name = ReadString("Enter your name");
+            //int age = ReadInt("Enter your age");
+            //string details = UserDetails(name, age);
+            //Console.WriteLine(details);
+
+            // OPTIONAL PARAMETERS
+
+            //int result = Add(5);
+            //Console.WriteLine(result);
+
+            //PrintName("aba");
+
+
+
             Console.ReadLine();
         }
 
-        static int Add(int a, int b)
-        {
-            return a + b;        
-        }
+        // OPTIONAL PARAMETERS (functions from above)
 
-        static int ReadInt(string message)
-        {
-            Console.Write($"{message}: ");
-            return Convert.ToInt32(Console.ReadLine());
-        }
+        // using the default value for a parameter int is 0
+        // static int Add(int a, int b = default) OR
+        //static int Add(int a, [Optional] int b)
+        //{
+        //    return a + b;
+        //}
 
-        static string ReadString(string message)
-        {
-            Console.Write($"{message}: ");
-            return Convert.ToString(Console.ReadLine());
-        }
+        //static void PrintName(string name = "Gabe")
+        //{
+        //    Console.WriteLine($"My name is {name}");
+        //}
 
-        static string UserDetails(string name, int age)
-        {
-            return $"Hello, my name is {name} and my age is {age}";
-        }
+        // PARAMETERS (Functions from above)
+
+        //static int Add(int a, int b)
+        //{
+        //    return a + b;        
+        //}
+
+        //static int ReadInt(string message)
+        //{
+        //    Console.Write($"{message}: ");
+        //    return Convert.ToInt32(Console.ReadLine());
+        //}
+
+        //static string ReadString(string message)
+        //{
+        //    Console.Write($"{message}: ");
+        //    return Convert.ToString(Console.ReadLine());
+        //}
+
+        //static string UserDetails(string name, int age)
+        //{
+        //    return $"Hello, my name is {name} and my age is {age}";
+        //}
 
         //static int[] CreateRandomArray()
         //{
