@@ -954,9 +954,21 @@ namespace HelloWorld
 
             //PrintName("aba");
 
+            // NAMED PARAMETERS
+            string nameInput = "Gabe";
+            int ageInput = 33;
+            string addressInput = "1 Somewhere Vale";
 
+            PrintDetails(age:ageInput, name:nameInput , address:addressInput);
 
             Console.ReadLine();
+        }
+
+        // NAMED PARAMETERS (functions from above)
+
+        static void PrintDetails(string name, int age, string address)
+        {
+            Console.WriteLine($"Hello, my name is {name}. My age is {age}, and I live at {address}");
         }
 
         // OPTIONAL PARAMETERS (functions from above)
