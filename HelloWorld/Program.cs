@@ -955,21 +955,92 @@ namespace HelloWorld
             //PrintName("aba");
 
             // NAMED PARAMETERS
-            string nameInput = "Gabe";
-            int ageInput = 33;
-            string addressInput = "1 Somewhere Vale";
+            //string nameInput = "Gabe";
+            //int ageInput = 33;
+            //string addressInput = "1 Somewhere Vale";
 
-            PrintDetails(age:ageInput, name:nameInput , address:addressInput);
+            //// using the : and referencing the variable allows them to be in any order
+            //PrintDetails(age:ageInput, 
+            //             name:nameInput,
+            //             address:addressInput);
+
+            // OUT PARAMETERS
+
+            //int num = 0;
+            //test(out num);
+            //Console.WriteLine(num);
+
+            // this is what IndexOf is doing --->
+            List<string> shoppingList = new List<string>
+            {
+                "Coffee", "Milk"
+            };
+
+            Console.WriteLine(shoppingList.IndexOf("Coffee"));
+            //Console.WriteLine(FindInList("milk", shoppingList, out int index));
+
+            Console.Write("Enter an item to search: ");
+            string query = Console.ReadLine();
+
+            if (FindInList(query, shoppingList, out int index))
+            {
+                Console.WriteLine($"Found {query} at index {index}");
+            }
+            else
+            {
+                Console.WriteLine("Not Found");
+            }
+            
+            //int index = -1;
+
+            //for (int i = 0; i < shoppingList.Count; i++)
+            //{
+            //    if (shoppingList[i].ToLower().Equals("milk"))
+            //    {
+            //        index = i;
+            //    }
+            //}
+            //bool found = index > -1;
+            //Console.WriteLine(found ? "Found" : "Not Found");
 
             Console.ReadLine();
         }
 
+        static bool FindInList(string s, List<string> list, out int index)
+        {
+            index = -1;
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i].ToLower().Equals(s.ToLower()))
+                {
+                    index = i;
+                }
+            }
+            
+            return index > -1;
+        }
+        static bool TryParse(string s, out int result)
+        {
+            result = 0;
+            return true;
+        }
+
+        //static void test(out int num)
+        //{
+        //    num = 5;
+        //    //return num;
+        //    //return true;
+        //}
+
+        // OUT PARAMETERS (functions from above)
+
         // NAMED PARAMETERS (functions from above)
 
-        static void PrintDetails(string name, int age, string address)
-        {
-            Console.WriteLine($"Hello, my name is {name}. My age is {age}, and I live at {address}");
-        }
+        //static void PrintDetails(string name, int age, string address)
+        //{
+        //    Console.WriteLine($"Hello, my name is {name}. My age is {age}, and I live at {address}");
+        //}
 
         // OPTIONAL PARAMETERS (functions from above)
 
