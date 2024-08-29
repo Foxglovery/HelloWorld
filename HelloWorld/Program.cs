@@ -1031,25 +1031,59 @@ namespace HelloWorld
 
             // AREA OF TRIANGLE EXERCISE
 
-            int width = ReadInt("Enter the width of the triangle: ");
-            int height = ReadInt("Enter the height of the triangle: ");
-        
-            Console.WriteLine($"The area is {TriangleArea(width, height)}");
+            //int width = ReadInt("Enter the width of the triangle: ");
+            //int height = ReadInt("Enter the height of the triangle: ");
 
+            //Console.WriteLine($"The area is {TriangleArea(width, height)}");
+
+            int[] numbers = new int[]
+            {
+                0, 1, 2, 3, 4, 5, 6
+            };
+
+            if (SumOfNumbers(numbers, out int total))
+            {
+                Console.WriteLine($"The total is {total}");
+            }
+            else
+            {
+                Console.WriteLine("Cannot sum an empty array");
+            }
+
+            
             Console.ReadLine();
         }
 
-        static int ReadInt(string message)
+        static bool SumOfNumbers(int[] numbers, out int total)
         {
-            Console.Write(message);
-            return Convert.ToInt32(Console.ReadLine());
-        }
-        
-        static int TriangleArea(int width, int height)
-        {
+            total = 0;
+            if (numbers.Length > 0)
+            {
+                
+                foreach (int number in numbers)
+                {
+                    total += number;
+                }
+
+            return true;
+
+            }
+
+            return false;
             
-            return (width * height) / 2;
         }
+
+        //static int ReadInt(string message)
+        //{
+        //    Console.Write(message);
+        //    return Convert.ToInt32(Console.ReadLine());
+        //}
+        
+        //static int TriangleArea(int width, int height)
+        //{
+            
+        //    return (width * height) / 2;
+        //}
 
         //static void Assign(ref int num, ref string name)
         //{
