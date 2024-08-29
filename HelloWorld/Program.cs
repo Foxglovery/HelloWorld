@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Globalization;
 using System.Threading;
 using System.Runtime.InteropServices;
+using System.CodeDom;
 
 namespace HelloWorld
 {
@@ -971,26 +972,26 @@ namespace HelloWorld
             //Console.WriteLine(num);
 
             // this is what IndexOf is doing --->
-            List<string> shoppingList = new List<string>
-            {
-                "Coffee", "Milk"
-            };
+            //List<string> shoppingList = new List<string>
+            //{
+            //    "Coffee", "Milk"
+            //};
 
-            Console.WriteLine(shoppingList.IndexOf("Coffee"));
-            //Console.WriteLine(FindInList("milk", shoppingList, out int index));
+            //Console.WriteLine(shoppingList.IndexOf("Coffee"));
+            ////Console.WriteLine(FindInList("milk", shoppingList, out int index));
 
-            Console.Write("Enter an item to search: ");
-            string query = Console.ReadLine();
+            //Console.Write("Enter an item to search: ");
+            //string query = Console.ReadLine();
 
-            if (FindInList(query, shoppingList, out int index))
-            {
-                Console.WriteLine($"Found {query} at index {index}");
-            }
-            else
-            {
-                Console.WriteLine("Not Found");
-            }
-            
+            //if (FindInList(query, shoppingList, out int index))
+            //{
+            //    Console.WriteLine($"Found {query} at index {index}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Not Found");
+            //}
+
             //int index = -1;
 
             //for (int i = 0; i < shoppingList.Count; i++)
@@ -1003,28 +1004,92 @@ namespace HelloWorld
             //bool found = index > -1;
             //Console.WriteLine(found ? "Found" : "Not Found");
 
+            // REFERENCE PARAMETERS
+            // adding the ref keyword links to two variables in different scopes
+            // passing by ref is technically quicker
+            //int num = 10;
+            string name = "Gabe";
+            //string newName = "Josephone";
+            //Assign(ref num, ref name);
+            //Console.WriteLine(num);
+            //Console.WriteLine(name);
+
+            //ChangeName(ref name, ref newName);
+            //Console.WriteLine(name);
+
+            //Console.Write("Enter your new name: ");
+            //string newName = Console.ReadLine();
+
+            //if (ChangeName(ref name, ref newName))
+            //{
+            //    Console.WriteLine($"Your new name is {name}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("New name cannot be empty or null");
+            //}
+
+            // AREA OF TRIANGLE EXERCISE
+
+            int width = ReadInt("Enter the width of the triangle: ");
+            int height = ReadInt("Enter the height of the triangle: ");
+        
+            Console.WriteLine($"The area is {TriangleArea(width, height)}");
+
             Console.ReadLine();
         }
 
-        static bool FindInList(string s, List<string> list, out int index)
+        static int ReadInt(string message)
         {
-            index = -1;
-
-            for (int i = 0; i < list.Count; i++)
-            {
-                if (list[i].ToLower().Equals(s.ToLower()))
-                {
-                    index = i;
-                }
-            }
+            Console.Write(message);
+            return Convert.ToInt32(Console.ReadLine());
+        }
+        
+        static int TriangleArea(int width, int height)
+        {
             
-            return index > -1;
+            return (width * height) / 2;
         }
-        static bool TryParse(string s, out int result)
-        {
-            result = 0;
-            return true;
-        }
+
+        //static void Assign(ref int num, ref string name)
+        //{
+        //    num = 20;
+        //    name = "Aba";
+        //}
+
+        // setting the return type to bool allows us to check if conditions are met
+        // before running the function
+        //static bool ChangeName(ref string name, ref string newName)
+        //{
+        //    if (!string.IsNullOrEmpty(newName))
+        //    {
+        //        name = newName;
+        //        return true;
+        //    }
+
+        //    return false;
+            
+        //}
+
+        //static bool FindInList(string s, List<string> list, out int index)
+        //{
+        //    index = -1;
+
+        //    for (int i = 0; i < list.Count; i++)
+        //    {
+        //        if (list[i].ToLower().Equals(s.ToLower()))
+        //        {
+        //            index = i;
+        //        }
+        //    }
+            
+        //    return index > -1;
+        //}
+        //static bool TryParse(string s, out int result)
+        //{
+        //    result = 0;
+        //    return true;
+        //}
 
         //static void test(out int num)
         //{
