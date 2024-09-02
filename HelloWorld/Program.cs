@@ -1036,42 +1036,78 @@ namespace HelloWorld
 
             //Console.WriteLine($"The area is {TriangleArea(width, height)}");
 
-            int[] numbers = new int[]
-            {
-                0, 1, 2, 3, 4, 5, 6
-            };
+            // SUM OF ARRAY EXERCISE
 
-            if (SumOfNumbers(numbers, out int total))
-            {
-                Console.WriteLine($"The total is {total}");
-            }
-            else
-            {
-                Console.WriteLine("Cannot sum an empty array");
-            }
+            //int[] numbers = new int[]
+            //{
+            //    0, 1, 2, 3, 4, 5, 6
+            //};
 
+            //if (SumOfNumbers(numbers, out int total))
+            //{
+            //    Console.WriteLine($"The total is {total}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Cannot sum an empty array");
+            //}
+
+            // EXCEPTION HANDLING
+
+
+
+            // System.FormatException
+            // System.OverflowException
+            bool looping = true;
+
+            while (looping)
+            {
+                try
+            {
+                Console.Write("Enter a number: ");
+                int num = Convert.ToInt32(Console.ReadLine());
+                looping = false;
+                Console.WriteLine(num);
+            }
+                // "Exception" catches all exceptions so put it last just in case
+                catch (FormatException)
+                {
+                    Console.WriteLine("Please only enter numerical values");
+                }
+                catch (OverflowException)
+                {
+                Console.WriteLine("Please limit your input to 2 billion");
+                }
+                catch (Exception)
+                {
+                Console.WriteLine("Something has gone wrong!");
+                }
+            }
             
+
+        
+           
             Console.ReadLine();
         }
 
-        static bool SumOfNumbers(int[] numbers, out int total)
-        {
-            total = 0;
-            if (numbers.Length > 0)
-            {
+        //static bool SumOfNumbers(int[] numbers, out int total)
+        //{
+        //    total = 0;
+        //    if (numbers.Length > 0)
+        //    {
                 
-                foreach (int number in numbers)
-                {
-                    total += number;
-                }
+        //        foreach (int number in numbers)
+        //        {
+        //            total += number;
+        //        }
 
-            return true;
+        //    return true;
 
-            }
+        //    }
 
-            return false;
+        //    return false;
             
-        }
+        //}
 
         //static int ReadInt(string message)
         //{
