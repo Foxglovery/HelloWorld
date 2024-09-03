@@ -1008,7 +1008,7 @@ namespace HelloWorld
             // adding the ref keyword links to two variables in different scopes
             // passing by ref is technically quicker
             //int num = 10;
-            string name = "Gabe";
+            //string name = "Gabe";
             //string newName = "Josephone";
             //Assign(ref num, ref name);
             //Console.WriteLine(num);
@@ -1127,41 +1127,61 @@ namespace HelloWorld
             //    }
             //}  GETS TURNED INTO THIS BELOW
 
-            Console.Write("Enter a number: ");
-            if (TryParse(Console.ReadLine(), out int result))
-            {
-                Console.WriteLine("Yay" + result);
-            }
-            else
-            {
-                Console.WriteLine("Oh no");
-            }
-           
-            
+            //Console.Write("Enter a number: ");
+            //if (TryParse(Console.ReadLine(), out int result))
+            //{
+            //    Console.WriteLine("Yay" + result);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Oh no");
+            //}
 
+            // DEBUGGING
+
+            //string name = "Gabe";
+            //int age;
+            //age = 35;
+
+            //PrintDetails(name, age);
+
+            //string message = ReadFromConsole("Enter anything: ");
+            //Console.WriteLine(message);
 
 
             Console.ReadLine();
         }
 
-        static bool TryParse(string input, out int result)
-        {
-            result = -1;
+        //static void PrintDetails(string name, int age)
+        //{
+        //    Console.WriteLine($"Name: {name}");
+        //    Console.WriteLine($"Age: {age}");
+        //}
 
-            try
-            {
-                result = Convert.ToInt32(input);
-                return true;
-            }
-            catch (Exception)
-            {
+        //static string ReadFromConsole(string message)
+        //{
+        //    Console.Write(message);
+        //    return Console.ReadLine();
+        //}
 
-                return false;
-            }
+        //static bool TryParse(string input, out int result)
+        //{
+        //    result = -1;
+
+        //    try
+        //    {
+        //        result = Convert.ToInt32(input);
+        //        return true;
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        return false;
+        //    }
             
 
             
-        }
+        //}
 
         //static bool SumOfNumbers(int[] numbers, out int total)
         //{
