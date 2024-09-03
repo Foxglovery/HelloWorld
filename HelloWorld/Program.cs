@@ -1058,36 +1058,109 @@ namespace HelloWorld
 
             // System.FormatException
             // System.OverflowException
-            bool looping = true;
 
-            while (looping)
+            //bool looping = true;
+
+            //while (looping)
+            //{
+            //    try
+            //{
+            //    Console.Write("Enter a number: ");
+            //    int num = Convert.ToInt32(Console.ReadLine());
+            //    looping = false;
+            //    Console.WriteLine(num);
+            //}
+            //    // "Exception" catches all exceptions so put it last just in case
+            //    catch (FormatException)
+            //    {
+            //        Console.WriteLine("Please only enter numerical values");
+            //    }
+            //    catch (OverflowException)
+            //    {
+            //    Console.WriteLine("Please limit your input to 2 billion");
+            //    }
+            //    catch (Exception)
+            //    {
+            //    Console.WriteLine("Something has gone wrong!");
+            //    }
+            //}
+
+            // PRINTING ERROR MESSAGES
+
+            //try
+            //{
+            //    Console.Write("Enter a number: ");
+            //    int num = Convert.ToInt32(Console.ReadLine());
+            //    Console.WriteLine(num);
+            //}
+            //// naming the exception allows you to access things like the error message in the catch
+            //catch (Exception e)
+            //{
+
+            //    Console.WriteLine($"Error: {e.Message}");
+            //}
+
+            //Console.WriteLine("Goodbye!");
+
+            // CUSTOM TRYPARSE EXERCISE
+            //bool looping = true;
+
+            //while (looping)
+            //{
+            //    try
+            //    {
+            //        Console.Write("Enter a number: ");
+            //        int num = Convert.ToInt32(Console.ReadLine());
+            //        looping = false;
+            //    }
+            //    catch (FormatException)
+            //    {
+            //        Console.WriteLine("Please only enter integers");
+            //    }
+            //    catch (OverflowException)
+            //    {
+            //        Console.WriteLine("Please keep number under 2 bilion");
+            //    }
+            //    catch (Exception e)
+            //    {
+            //        Console.WriteLine($"Error: {e.Message}");
+            //    }
+            //}  GETS TURNED INTO THIS BELOW
+
+            Console.Write("Enter a number: ");
+            if (TryParse(Console.ReadLine(), out int result))
             {
-                try
-            {
-                Console.Write("Enter a number: ");
-                int num = Convert.ToInt32(Console.ReadLine());
-                looping = false;
-                Console.WriteLine(num);
+                Console.WriteLine("Yay" + result);
             }
-                // "Exception" catches all exceptions so put it last just in case
-                catch (FormatException)
-                {
-                    Console.WriteLine("Please only enter numerical values");
-                }
-                catch (OverflowException)
-                {
-                Console.WriteLine("Please limit your input to 2 billion");
-                }
-                catch (Exception)
-                {
-                Console.WriteLine("Something has gone wrong!");
-                }
+            else
+            {
+                Console.WriteLine("Oh no");
+            }
+           
+            
+
+
+
+            Console.ReadLine();
+        }
+
+        static bool TryParse(string input, out int result)
+        {
+            result = -1;
+
+            try
+            {
+                result = Convert.ToInt32(input);
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
             }
             
 
-        
-           
-            Console.ReadLine();
+            
         }
 
         //static bool SumOfNumbers(int[] numbers, out int total)
