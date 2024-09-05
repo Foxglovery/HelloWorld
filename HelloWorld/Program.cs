@@ -20,6 +20,12 @@ namespace HelloWorld
     }
     internal class Program
     {
+        struct Person
+        {
+           public string name;
+           public int age;
+            public int birthMonth;
+        }
         static void Main(string[] args)
         {
             //string textAge = "-23";
@@ -1143,14 +1149,94 @@ namespace HelloWorld
             //int age;
             //age = 35;
 
+            //if (age > 18)
+            //{
+            //    Console.WriteLine("18+");
+            //}
+
             //PrintDetails(name, age);
 
             //string message = ReadFromConsole("Enter anything: ");
             //Console.WriteLine(message);
 
+            // DEBUGGING EXERCISE
+
+            //int age = 55;
+
+            //if (age > 18 && age < 30)
+            //{
+            //    Console.WriteLine("Over 18");
+            //}
+            //else if (age > 30 && age < 50)
+            //{
+            //    Console.WriteLine("Over 30");
+            //}
+            //else if (age > 50)
+            //{
+            //    Console.WriteLine("Over 50");
+            //}
+
+            // STRUCTURES
+
+            // structure gets declared above the Main scope
+            //string name = "Gabe";
+            //int age = 23;
+            //int birthMonth = 5;
+
+            //Person person;
+
+            //person.name = "Gabe";
+            //person.age = 35;
+            //person.birthMonth = 5;
+
+
+            //Console.WriteLine($"{person.name}-{person.age}-{person.birthMonth}");
+
+            //string newName = "";
+            //int newAge = 0;
+            //int newBirthMonth = 0;
+            //ReturnPerson(ref newName, ref newAge, ref newBirthMonth);
+            //Console.WriteLine($"{newName} - {newAge} -{newBirthMonth}");
+
+            Person person = ReturnPerson();
+            Console.WriteLine($"{person.name} - {person.age} -{person.birthMonth}");
 
             Console.ReadLine();
         }
+        // return type is the structure, Person
+        static Person ReturnPerson()
+        {
+            Console.Write("Enter your name: ");
+            string name = Console.ReadLine();
+
+            Console.Write("Enter your age: ");
+           int age = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter your birthmonth: ");
+            int birthMonth = Convert.ToInt32(Console.ReadLine());
+
+            Person person;
+            person.name = name;
+            person.age = age;
+            person.birthMonth = birthMonth;
+
+            return person;
+        }
+
+        // this uses ref to assign to the parameters passed in but becomes tedious. 
+        //static void ReturnPerson(ref string name, ref int age, ref int newBirthMonth)
+        //{
+        //    Console.Write("Enter your name: ");
+        //    name = Console.ReadLine();
+
+        //    Console.Write("Enter your age: ");
+        //    age = Convert.ToInt32(Console.ReadLine());
+
+        //    Console.Write("Enter your birthmonth: ");
+        //    newBirthMonth = Convert.ToInt32(Console.ReadLine());
+
+
+        //}
 
         //static void PrintDetails(string name, int age)
         //{
@@ -1178,9 +1264,9 @@ namespace HelloWorld
 
         //        return false;
         //    }
-            
 
-            
+
+
         //}
 
         //static bool SumOfNumbers(int[] numbers, out int total)
@@ -1188,7 +1274,7 @@ namespace HelloWorld
         //    total = 0;
         //    if (numbers.Length > 0)
         //    {
-                
+
         //        foreach (int number in numbers)
         //        {
         //            total += number;
@@ -1199,7 +1285,7 @@ namespace HelloWorld
         //    }
 
         //    return false;
-            
+
         //}
 
         //static int ReadInt(string message)
@@ -1207,10 +1293,10 @@ namespace HelloWorld
         //    Console.Write(message);
         //    return Convert.ToInt32(Console.ReadLine());
         //}
-        
+
         //static int TriangleArea(int width, int height)
         //{
-            
+
         //    return (width * height) / 2;
         //}
 
@@ -1231,7 +1317,7 @@ namespace HelloWorld
         //    }
 
         //    return false;
-            
+
         //}
 
         //static bool FindInList(string s, List<string> list, out int index)
@@ -1245,7 +1331,7 @@ namespace HelloWorld
         //            index = i;
         //        }
         //    }
-            
+
         //    return index > -1;
         //}
         //static bool TryParse(string s, out int result)
@@ -1339,7 +1425,7 @@ namespace HelloWorld
         //{
         //    Console.WriteLine($"My name is {ReturnName()} and my age is {ReturnAge()}");
         //}
-        
+
 
     }
 }
