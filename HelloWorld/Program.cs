@@ -20,6 +20,39 @@ namespace HelloWorld
     }
     internal class Program
     {
+        // ClASSES constructor
+        // dont have to give default values for the class as opposed to structures
+        // which means you can have multiple constructors for different values (name, age)
+        // you can create empty instances and you can create instances with only certain values defined
+
+        class Person
+        {
+            public string name;
+            public int age;
+
+            public Person(string name, int age)
+            {
+                this.name = name;
+                this.age = age;
+            }
+            public Person(string name)
+            {
+                this.name = name;
+                this.age = -1;
+            }
+            public Person(int age)
+            {
+                this.age = age;
+                this.name = "";
+            }
+            public Person()
+            {
+
+            }
+        }
+
+        
+
         //struct Person
         //{
         //   public string name;
@@ -1212,8 +1245,25 @@ namespace HelloWorld
 
 
             // CLASSES
+            Console.Write("Enter a name: ");
+            string name = Console.ReadLine();
+            
+            Console.Write("Enter an age: ");
+            int age = Convert.ToInt32(Console.ReadLine());
 
+            Person person = new Person(name, age);
 
+            if (!string.IsNullOrEmpty(name))
+            {
+                Console.WriteLine(person.name);
+            }
+
+            if (person.age > -1)
+            {
+                Console.WriteLine(person.age);
+            }
+            
+            
 
             Console.ReadLine();
         }
