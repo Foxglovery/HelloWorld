@@ -20,12 +20,21 @@ namespace HelloWorld
     }
     internal class Program
     {
-        struct Person
-        {
-           public string name;
-           public int age;
-            public int birthMonth;
-        }
+        //struct Person
+        //{
+        //   public string name;
+        //   public int age;
+        //   public int birthMonth;
+
+        //   // using a constructor
+        //   public Person(string name, int age, int birthMonth)
+        //    {
+        //        // using this. references the global scoped variable above
+        //        this.name = name;
+        //        this.age = age;
+        //        this.birthMonth = birthMonth;
+        //    }
+        //}
         static void Main(string[] args)
         {
             //string textAge = "-23";
@@ -1198,30 +1207,35 @@ namespace HelloWorld
             //ReturnPerson(ref newName, ref newAge, ref newBirthMonth);
             //Console.WriteLine($"{newName} - {newAge} -{newBirthMonth}");
 
-            Person person = ReturnPerson();
-            Console.WriteLine($"{person.name} - {person.age} -{person.birthMonth}");
+            //Person person = ReturnPerson();
+            //Console.WriteLine($"{person.name} - {person.age} -{person.birthMonth}");
+
+
+            // CLASSES
+
+
 
             Console.ReadLine();
         }
         // return type is the structure, Person
-        static Person ReturnPerson()
-        {
-            Console.Write("Enter your name: ");
-            string name = Console.ReadLine();
+        //static Person ReturnPerson()
+        //{
+        //    Console.Write("Enter your name: ");
+        //    string name = Console.ReadLine();
 
-            Console.Write("Enter your age: ");
-           int age = Convert.ToInt32(Console.ReadLine());
+        //    Console.Write("Enter your age: ");
+        //   int age = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Enter your birthmonth: ");
-            int birthMonth = Convert.ToInt32(Console.ReadLine());
+        //    Console.Write("Enter your birthmonth: ");
+        //    int birthMonth = Convert.ToInt32(Console.ReadLine());
 
-            Person person;
-            person.name = name;
-            person.age = age;
-            person.birthMonth = birthMonth;
+        //    //Person person;
+        //    //person.name = name;
+        //    //person.age = age;
+        //    //person.birthMonth = birthMonth;
 
-            return person;
-        }
+        //    return new Person(name, age, birthMonth);
+        //}
 
         // this uses ref to assign to the parameters passed in but becomes tedious. 
         //static void ReturnPerson(ref string name, ref int age, ref int newBirthMonth)
