@@ -55,8 +55,8 @@ namespace HelloWorld
 
         class Person
         {
-            public string name;
-            public int age;
+            private string name;
+            private int age;
 
             public Person(string name, int age)
             {
@@ -64,6 +64,31 @@ namespace HelloWorld
                 this.age = age;
             }
 
+            // in order to change fields when they are private, use getters and setters
+            //public void SetName(string name)
+            //{
+            //    // using the ternary here saves several lines
+            //    this.name = !string.IsNullOrEmpty(name) ? name : "Invalid Name";
+            //}
+
+            public void SetName(string name) => this.name = !string.IsNullOrEmpty(name) ? name : "Invalid Name";
+
+            //public string GetName()
+            //{
+            //return name;
+            //}
+            public string GetName() => name;
+
+
+            public void SetAge(int age) => this.age = age >= 0 && age <= 150 ? age : -1;
+
+
+            //public int GetAge()
+            //{
+            //    return age;
+            //}
+            // using arrow function
+            public int GetAge() => age;
             public string ReturnDetails()
             {
                 return $"Name: {name}\nAge: {age}";            
@@ -529,6 +554,7 @@ namespace HelloWorld
             //}
 
             //// comparing an object and string, will not work with ==
+            ///
             //// Equals method checks the values not where they are in memory
             //char[] chars = new char[] { 'H', 'e', 'l', 'l', 'o' };
             //object newCompare = new string(chars);
@@ -1283,13 +1309,22 @@ namespace HelloWorld
             //}
 
             // CLASS FUNCTIONS
-
+            // CLASS FIELDS
             Person person = new Person("Gilly", 34);
             // can use dot notation because those variables are defined in the constructor
             // THIS WAY IS NOT PREFERED
             // Console.WriteLine(ReturnDetails(person));
             // ***for function calls that are inside the class, use dot notation
             Console.WriteLine(person.ReturnDetails());
+            // these fields can be changed because the class is set to public
+            //person.name = "Jipper";
+            //person.age = 77;
+            // instead, use the setter function made in the class
+            person.SetName("Jipper");
+            person.SetAge(44);
+            Console.WriteLine(person.ReturnDetails());
+            // then with the getter
+            Console.WriteLine($"Hello, your name is {person.GetName()} and your age is {person.GetAge()}");
 
             Console.ReadLine();
         }
@@ -1303,10 +1338,11 @@ namespace HelloWorld
         
         // now if fields are added to the class, nothing in the function has to change
         // this function can be included inside the class, see above
-        static string ReturnDetails(Person person)
-        {
-            return $"Name: {person.name}\nAge: {person.age}";
-        }
+        // THIS IS AN EXAMPLE OF POOR STRUCTURE BECAUSE FUNCTIONS SHOULD BE IN THE CLASS
+        //static string ReturnDetails(Person person)
+        //{
+        //    return $"Name: {person.name}\nAge: {person.age}";
+        //}
 
         // return type is the structure, Person
         //static Person ReturnPerson()
