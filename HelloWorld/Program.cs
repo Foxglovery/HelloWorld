@@ -25,6 +25,34 @@ namespace HelloWorld
         // which means you can have multiple constructors for different values (name, age)
         // you can create empty instances and you can create instances with only certain values defined
 
+        //class Person
+        //{
+        //    public string name;
+        //    public int age;
+
+        //    public Person(string name, int age)
+        //    {
+        //        this.name = name;
+        //        this.age = age;
+        //    }
+        //    public Person(string name)
+        //    {
+        //        this.name = name;
+        //        this.age = -1;
+        //    }
+        //    public Person(int age)
+        //    {
+        //        this.age = age;
+        //        this.name = "";
+        //    }
+        //    public Person()
+        //    {
+
+        //    }
+        //}
+
+        // CLASS FUNCTIONS
+
         class Person
         {
             public string name;
@@ -35,19 +63,10 @@ namespace HelloWorld
                 this.name = name;
                 this.age = age;
             }
-            public Person(string name)
-            {
-                this.name = name;
-                this.age = -1;
-            }
-            public Person(int age)
-            {
-                this.age = age;
-                this.name = "";
-            }
-            public Person()
-            {
 
+            public string ReturnDetails()
+            {
+                return $"Name: {name}\nAge: {age}";            
             }
         }
 
@@ -1245,28 +1264,50 @@ namespace HelloWorld
 
 
             // CLASSES
-            Console.Write("Enter a name: ");
-            string name = Console.ReadLine();
-            
-            Console.Write("Enter an age: ");
-            int age = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Enter a name: ");
+            //string name = Console.ReadLine();
 
-            Person person = new Person(name, age);
+            //Console.Write("Enter an age: ");
+            //int age = Convert.ToInt32(Console.ReadLine());
 
-            if (!string.IsNullOrEmpty(name))
-            {
-                Console.WriteLine(person.name);
-            }
+            //Person person = new Person(name, age);
 
-            if (person.age > -1)
-            {
-                Console.WriteLine(person.age);
-            }
-            
-            
+            //if (!string.IsNullOrEmpty(name))
+            //{
+            //    Console.WriteLine(person.name);
+            //}
+
+            //if (person.age > -1)
+            //{
+            //    Console.WriteLine(person.age);
+            //}
+
+            // CLASS FUNCTIONS
+
+            Person person = new Person("Gilly", 34);
+            // can use dot notation because those variables are defined in the constructor
+            // THIS WAY IS NOT PREFERED
+            // Console.WriteLine(ReturnDetails(person));
+            // ***for function calls that are inside the class, use dot notation
+            Console.WriteLine(person.ReturnDetails());
 
             Console.ReadLine();
         }
+
+        // CLASS FUNCTIONS
+        // this function is not dry and doesnt utilize the class
+        // static string ReturnDetails(string name, int age)
+        //{
+        //    return $"Name: {name}\nAge: {age}";
+        //}
+        
+        // now if fields are added to the class, nothing in the function has to change
+        // this function can be included inside the class, see above
+        static string ReturnDetails(Person person)
+        {
+            return $"Name: {person.name}\nAge: {person.age}";
+        }
+
         // return type is the structure, Person
         //static Person ReturnPerson()
         //{
