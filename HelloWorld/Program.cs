@@ -55,18 +55,38 @@ namespace HelloWorld
 
         class Person
         {
+            // or you can use auto-properties for get/set if no logic is required:
+            //public string Name { get; set; }
+            //public int Age { get; set; }
+
             private string name;
             private int age;
-            private string test = "hello";
+            
+
+            // public class variables are known as Fields. These act as middle-men and replace the longer getter/setters
+            public string Name
+            {
+                get => name;
+                set => name = !string.IsNullOrEmpty(value) ? value : "Invalid Name";
+            }
+            // if your setter needs logic, its best to keep the curly brace style like below, otherwise arrow will be best
+            //public string Name { get => name; set => name = value; }
+            //public int Age { get => age; set => age = value; }
+            public int Age
+            {
+                get => age;
+                set => age = value >= 0 && value <= 150 ? value : -1;
+            }
 
             public Person(string name, int age)
-            {
-                this.name = name;
-                this.age = age;
-                string test = "hi";
+            {             
                 // using this. refers to the global variable instead of the local one
-                Console.WriteLine(this.test);
+                Name = name;
+                Age = age;
             }
+            // CLASS PROPERTIES
+
+
 
             // in order to change fields when they are private, use getters and setters
             //public void SetName(string name)
@@ -75,27 +95,27 @@ namespace HelloWorld
             //    this.name = !string.IsNullOrEmpty(name) ? name : "Invalid Name";
             //}
 
-            public void SetName(string name) => this.name = !string.IsNullOrEmpty(name) ? name : "Invalid Name";
+            //public void SetName(string name) => this.name = !string.IsNullOrEmpty(name) ? name : "Invalid Name";
 
-            //public string GetName()
-            //{
-            //return name;
-            //}
-            public string GetName() => name;
-
-
-            public void SetAge(int age) => this.age = age >= 0 && age <= 150 ? age : -1;
+            ////public string GetName()
+            ////{
+            ////return name;
+            ////}
+            //public string GetName() => name;
 
 
-            //public int GetAge()
-            //{
-            //    return age;
-            //}
-            // using arrow function
-            public int GetAge() => age;
+            //public void SetAge(int age) => this.age = age >= 0 && age <= 150 ? age : -1;
+
+
+            ////public int GetAge()
+            ////{
+            ////    return age;
+            ////}
+            //// using arrow function
+            //public int GetAge() => age;
             public string ReturnDetails()
             {
-                return $"Name: {name}\nAge: {age}";            
+                return $"Name: {Name}\nAge: {Age}";            
             }
         }
 
@@ -1335,16 +1355,20 @@ namespace HelloWorld
             Person person = new Person("Aba", 23);
             Console.WriteLine(person.ReturnDetails());
 
+            person.Name = "Harry";
+            person.Age = 44;
+            Console.WriteLine(person.ReturnDetails());
+            Console.WriteLine($"Your name is {person.Name} and your age is {person.Age}");
             Console.ReadLine();
         }
 
         // CLASS VARIABLE / FUNCTION SCOPE
         // in order to access variables/ class objects created in main, must be passed in as parameters
         // if you want variables accessable to a class, need to put them at the top of the class declaration
-        static void something(Person person)
-        {
-            Console.WriteLine(person.ReturnDetails());
-        }
+        //static void something(Person person)
+        //{
+        //    Console.WriteLine(person.ReturnDetails());
+        //}
 
         // CLASS FUNCTIONS
         // this function is not dry and doesnt utilize the class
