@@ -57,11 +57,15 @@ namespace HelloWorld
         {
             private string name;
             private int age;
+            private string test = "hello";
 
             public Person(string name, int age)
             {
                 this.name = name;
                 this.age = age;
+                string test = "hi";
+                // using this. refers to the global variable instead of the local one
+                Console.WriteLine(this.test);
             }
 
             // in order to change fields when they are private, use getters and setters
@@ -1310,23 +1314,36 @@ namespace HelloWorld
 
             // CLASS FUNCTIONS
             // CLASS FIELDS
-            Person person = new Person("Gilly", 34);
+            //Person person = new Person("Gilly", 34);
             // can use dot notation because those variables are defined in the constructor
             // THIS WAY IS NOT PREFERED
             // Console.WriteLine(ReturnDetails(person));
             // ***for function calls that are inside the class, use dot notation
-            Console.WriteLine(person.ReturnDetails());
+            //Console.WriteLine(person.ReturnDetails());
             // these fields can be changed because the class is set to public
             //person.name = "Jipper";
             //person.age = 77;
             // instead, use the setter function made in the class
-            person.SetName("Jipper");
-            person.SetAge(44);
-            Console.WriteLine(person.ReturnDetails());
+            //person.SetName("Jipper");
+            //person.SetAge(44);
+            //Console.WriteLine(person.ReturnDetails());
             // then with the getter
-            Console.WriteLine($"Hello, your name is {person.GetName()} and your age is {person.GetAge()}");
+            //Console.WriteLine($"Hello, your name is {person.GetName()} and your age is {person.GetAge()}");
+
+            // CLASS VARIABLE/FUNCTION SCOPE
+
+            Person person = new Person("Aba", 23);
+            Console.WriteLine(person.ReturnDetails());
 
             Console.ReadLine();
+        }
+
+        // CLASS VARIABLE / FUNCTION SCOPE
+        // in order to access variables/ class objects created in main, must be passed in as parameters
+        // if you want variables accessable to a class, need to put them at the top of the class declaration
+        static void something(Person person)
+        {
+            Console.WriteLine(person.ReturnDetails());
         }
 
         // CLASS FUNCTIONS
