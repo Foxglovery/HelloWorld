@@ -117,6 +117,22 @@ namespace HelloWorld
             {
                 return $"Name: {Name}\nAge: {Age}";            
             }
+
+            // adding a ToString overide allows you to naturally print out to the screen
+            public override string ToString()
+            {
+                return ReturnDetails();
+            }
+            // equality override allows equality testing
+            public override bool Equals(object obj)
+            {
+                if (obj is Person)
+                {
+                    Person person = obj as Person;
+                return Name.Equals(person.Name) && Age == person.Age;
+                }
+                return false;
+            }
         }
 
         
@@ -1353,12 +1369,27 @@ namespace HelloWorld
             // CLASS VARIABLE/FUNCTION SCOPE
 
             Person person = new Person("Aba", 23);
-            Console.WriteLine(person.ReturnDetails());
+            Person test = new Person("Aba", 23);
 
-            person.Name = "Harry";
-            person.Age = 44;
-            Console.WriteLine(person.ReturnDetails());
-            Console.WriteLine($"Your name is {person.Name} and your age is {person.Age}");
+            if (person.Equals(test))
+            {
+                Console.WriteLine("Same");
+            }
+            else
+            {
+                Console.WriteLine("Not Same");
+            }
+            //Console.WriteLine(person.ReturnDetails());
+            //Console.WriteLine(person.ToString());
+            Console.WriteLine(person);
+            //person.Name = "Harry";
+            //person.Age = 44;
+            //Console.WriteLine(person.ReturnDetails());
+            //Console.WriteLine($"Your name is {person.Name} and your age is {person.Age}");
+
+            // Class ToString function Overide
+           
+            
             Console.ReadLine();
         }
 
